@@ -44,7 +44,7 @@
             // 
             this.tvKategoriler.Location = new System.Drawing.Point(12, 40);
             this.tvKategoriler.Name = "tvKategoriler";
-            this.tvKategoriler.Size = new System.Drawing.Size(192, 342);
+            this.tvKategoriler.Size = new System.Drawing.Size(241, 311);
             this.tvKategoriler.TabIndex = 0;
             // 
             // label1
@@ -58,7 +58,7 @@
             // 
             // txtKategoriGiris
             // 
-            this.txtKategoriGiris.Location = new System.Drawing.Point(222, 40);
+            this.txtKategoriGiris.Location = new System.Drawing.Point(279, 40);
             this.txtKategoriGiris.Name = "txtKategoriGiris";
             this.txtKategoriGiris.Size = new System.Drawing.Size(239, 20);
             this.txtKategoriGiris.TabIndex = 2;
@@ -66,7 +66,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(230, 21);
+            this.label2.Location = new System.Drawing.Point(287, 21);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(93, 13);
             this.label2.TabIndex = 3;
@@ -75,7 +75,7 @@
             // rdBtnAnaKategori
             // 
             this.rdBtnAnaKategori.AutoSize = true;
-            this.rdBtnAnaKategori.Location = new System.Drawing.Point(222, 67);
+            this.rdBtnAnaKategori.Location = new System.Drawing.Point(279, 67);
             this.rdBtnAnaKategori.Name = "rdBtnAnaKategori";
             this.rdBtnAnaKategori.Size = new System.Drawing.Size(86, 17);
             this.rdBtnAnaKategori.TabIndex = 4;
@@ -86,7 +86,7 @@
             // rdBtnAltKategori
             // 
             this.rdBtnAltKategori.AutoSize = true;
-            this.rdBtnAltKategori.Location = new System.Drawing.Point(222, 91);
+            this.rdBtnAltKategori.Location = new System.Drawing.Point(279, 91);
             this.rdBtnAltKategori.Name = "rdBtnAltKategori";
             this.rdBtnAltKategori.Size = new System.Drawing.Size(79, 17);
             this.rdBtnAltKategori.TabIndex = 5;
@@ -96,7 +96,7 @@
             // 
             // btnEkle
             // 
-            this.btnEkle.Location = new System.Drawing.Point(333, 67);
+            this.btnEkle.Location = new System.Drawing.Point(390, 67);
             this.btnEkle.Name = "btnEkle";
             this.btnEkle.Size = new System.Drawing.Size(128, 41);
             this.btnEkle.TabIndex = 6;
@@ -106,7 +106,7 @@
             // 
             // btnSil
             // 
-            this.btnSil.Location = new System.Drawing.Point(222, 142);
+            this.btnSil.Location = new System.Drawing.Point(12, 360);
             this.btnSil.Name = "btnSil";
             this.btnSil.Size = new System.Drawing.Size(75, 23);
             this.btnSil.TabIndex = 7;
@@ -116,7 +116,7 @@
             // 
             // btnGoster
             // 
-            this.btnGoster.Location = new System.Drawing.Point(222, 171);
+            this.btnGoster.Location = new System.Drawing.Point(93, 360);
             this.btnGoster.Name = "btnGoster";
             this.btnGoster.Size = new System.Drawing.Size(75, 23);
             this.btnGoster.TabIndex = 8;
@@ -126,7 +126,7 @@
             // 
             // btnGizle
             // 
-            this.btnGizle.Location = new System.Drawing.Point(222, 201);
+            this.btnGizle.Location = new System.Drawing.Point(178, 360);
             this.btnGizle.Name = "btnGizle";
             this.btnGizle.Size = new System.Drawing.Size(75, 23);
             this.btnGizle.TabIndex = 9;
@@ -138,7 +138,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(473, 384);
+            this.ClientSize = new System.Drawing.Size(530, 398);
             this.Controls.Add(this.btnGizle);
             this.Controls.Add(this.btnGoster);
             this.Controls.Add(this.btnSil);
