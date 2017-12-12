@@ -17,6 +17,5 @@ namespace Binode.Data.Model
         public int SiraNumarasi { get; set; }
         public DateTime EklenmeTarihi { get; set; }
         public string Ikon { get; set; }
-
     }
 }

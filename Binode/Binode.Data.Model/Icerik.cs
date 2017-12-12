@@ -17,8 +17,7 @@ namespace Binode.Data.Model
         Metin,
         Pdf,
         Ses,
-        Video
+        Video,
+        Gorsel
     }
-
-    
 }
