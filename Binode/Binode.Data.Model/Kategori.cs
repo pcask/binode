@@ -23,5 +23,10 @@ namespace Binode.Data.Model
             AltKategori = new List<Kategori>();
             Icerik = new List<Model.Icerik>();
         }
+
+        public override string ToString()
+        {
+            return Isim;
+        }
     }
 }

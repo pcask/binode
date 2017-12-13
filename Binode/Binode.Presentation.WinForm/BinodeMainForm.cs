@@ -200,13 +200,16 @@ namespace Binode.Presentation.WinForm
             switch (content.Tip)
             {
                 case IcerikTipi.Metin:
-                    ShowVideoContentPlayerForm();
+                    IcerikDetay id = new IcerikDetay();
+                    id.TiklananIcerik = content;
+                    id.ShowDialog();
                     break;
                 case IcerikTipi.Pdf:
                     break;
                 case IcerikTipi.Ses:
                     break;
-                case IcerikTipi.Video:ShowVideoContentPlayerForm();
+                case IcerikTipi.Video:
+                    ShowVideoContentPlayerForm();
                     break;
                 default:
                     break;
