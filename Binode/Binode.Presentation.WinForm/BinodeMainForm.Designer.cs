@@ -112,6 +112,8 @@ namespace Binode.Presentation.WinForm
             this.imglContentSmallIcons.TransparentColor = System.Drawing.Color.Transparent;
             this.imglContentSmallIcons.Images.SetKeyName(0, "metin");
             this.imglContentSmallIcons.Images.SetKeyName(1, "pdf");
+            this.imglContentSmallIcons.Images.SetKeyName(2, "ses");
+            this.imglContentSmallIcons.Images.SetKeyName(3, "video");
             // 
             // contextMenuStrip1
             // 
@@ -121,7 +123,7 @@ namespace Binode.Presentation.WinForm
             this.toolStripMenuItem4,
             this.toolStripMenuItem3});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(170, 114);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(170, 92);
             this.contextMenuStrip1.Text = "Yeniden Adlandır";
             // 
             // toolStripMenuItem1
@@ -168,12 +170,14 @@ namespace Binode.Presentation.WinForm
             this.videoToolStripMenuItem.Name = "videoToolStripMenuItem";
             this.videoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.videoToolStripMenuItem.Text = "Video";
+            this.videoToolStripMenuItem.Click += new System.EventHandler(this.videoToolStripMenuItem_Click);
             // 
             // sesToolStripMenuItem
             // 
             this.sesToolStripMenuItem.Name = "sesToolStripMenuItem";
             this.sesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.sesToolStripMenuItem.Text = "Ses";
+            this.sesToolStripMenuItem.Click += new System.EventHandler(this.sesToolStripMenuItem_Click);
             // 
             // toolStripMenuItem3
             // 
