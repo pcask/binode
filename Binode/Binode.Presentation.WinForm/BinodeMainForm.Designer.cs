@@ -92,7 +92,7 @@ namespace Binode.Presentation.WinForm
             this.listView1.Size = new System.Drawing.Size(554, 405);
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
+            this.listView1.View = System.Windows.Forms.View.SmallIcon;
             // 
             // columnHeader1
             // 
@@ -110,7 +110,7 @@ namespace Binode.Presentation.WinForm
             this.toolStripMenuItem4,
             this.toolStripMenuItem3});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(170, 114);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(170, 92);
             this.contextMenuStrip1.Text = "Yeniden Adlandır";
             // 
             // toolStripMenuItem1
@@ -141,26 +141,26 @@ namespace Binode.Presentation.WinForm
             // metinToolStripMenuItem
             // 
             this.metinToolStripMenuItem.Name = "metinToolStripMenuItem";
-            this.metinToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.metinToolStripMenuItem.Size = new System.Drawing.Size(105, 22);
             this.metinToolStripMenuItem.Text = "Metin";
             this.metinToolStripMenuItem.Click += new System.EventHandler(this.metinToolStripMenuItem_Click);
             // 
             // pdfToolStripMenuItem
             // 
             this.pdfToolStripMenuItem.Name = "pdfToolStripMenuItem";
-            this.pdfToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.pdfToolStripMenuItem.Size = new System.Drawing.Size(105, 22);
             this.pdfToolStripMenuItem.Text = "Pdf";
             // 
             // videoToolStripMenuItem
             // 
             this.videoToolStripMenuItem.Name = "videoToolStripMenuItem";
-            this.videoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.videoToolStripMenuItem.Size = new System.Drawing.Size(105, 22);
             this.videoToolStripMenuItem.Text = "Video";
             // 
             // sesToolStripMenuItem
             // 
             this.sesToolStripMenuItem.Name = "sesToolStripMenuItem";
-            this.sesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.sesToolStripMenuItem.Size = new System.Drawing.Size(105, 22);
             this.sesToolStripMenuItem.Text = "Ses";
             // 
             // toolStripMenuItem3
@@ -169,14 +169,14 @@ namespace Binode.Presentation.WinForm
             this.toolStripMenuItem3.Size = new System.Drawing.Size(169, 22);
             this.toolStripMenuItem3.Text = "Sil";
             // 
-            // BinodeMain
+            // BinodeMainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(796, 454);
             this.Controls.Add(this.grpIcerik);
             this.Controls.Add(this.grpKategori);
-            this.Name = "BinodeMain";
+            this.Name = "BinodeMainForm";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.grpKategori.ResumeLayout(false);
@@ -193,7 +193,6 @@ namespace Binode.Presentation.WinForm
         private System.Windows.Forms.GroupBox grpKategori;
         private System.Windows.Forms.TreeView treeKategori;
         private System.Windows.Forms.GroupBox grpIcerik;
-        private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
@@ -205,6 +204,7 @@ namespace Binode.Presentation.WinForm
         private System.Windows.Forms.ToolStripMenuItem pdfToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem videoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sesToolStripMenuItem;
+        public System.Windows.Forms.ListView listView1;
     }
 }
 

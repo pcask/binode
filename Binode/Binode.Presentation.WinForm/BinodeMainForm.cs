@@ -15,7 +15,7 @@ namespace Binode.Presentation.WinForm
 {
     public partial class BinodeMainForm : Form
     {
-        private TreeNode _rightClicknode;
+        public TreeNode _rightClicknode;
 
         public BinodeMainForm()
         {
@@ -66,7 +66,7 @@ namespace Binode.Presentation.WinForm
             ListViewDoldur(e.Node);
         }
 
-        private void ListViewDoldur(TreeNode node)
+        public void ListViewDoldur(TreeNode node)
         {
             var kategori = node.Tag as Kategori;
 
@@ -150,7 +150,31 @@ namespace Binode.Presentation.WinForm
         private void metinToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var textContentForm = new AddTextContentForm();
+            textContentForm.Owner = this;
+            textContentForm.FormClosing += TextContentForm_FormClosing;
             textContentForm.ShowDialog();
+        }
+
+        private void TextContentForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            var gelenForm = (AddTextContentForm)sender;
+
+            Kategori seciliKategori = _rightClicknode.Tag as Kategori;
+
+            if (seciliKategori.Icerik == null)
+                seciliKategori.Icerik = new List<Icerik>();
+
+            seciliKategori.Icerik.Add(new Icerik
+            {
+                Isim = gelenForm.title,
+                Tip = IcerikTipi.Metin,
+                Kategori = seciliKategori,
+                Content = gelenForm.content,
+                EklenmeTarihi = DateTime.Now
+            });
+
+            listView1.Items.Clear();
+            ListViewDoldur(_rightClicknode);
         }
     }
 }
