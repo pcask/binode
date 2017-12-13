@@ -29,9 +29,11 @@
         private void InitializeComponent()
         {
             this.grpKategori = new System.Windows.Forms.GroupBox();
-            this.grpIcerik = new System.Windows.Forms.GroupBox();
             this.treeKategori = new System.Windows.Forms.TreeView();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.grpIcerik = new System.Windows.Forms.GroupBox();
+            this.lstViewIcerik = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.grpKategori.SuspendLayout();
             this.grpIcerik.SuspendLayout();
             this.SuspendLayout();
@@ -46,9 +48,18 @@
             this.grpKategori.TabStop = false;
             this.grpKategori.Text = "Kategori";
             // 
+            // treeKategori
+            // 
+            this.treeKategori.Location = new System.Drawing.Point(6, 19);
+            this.treeKategori.Name = "treeKategori";
+            this.treeKategori.Size = new System.Drawing.Size(188, 405);
+            this.treeKategori.TabIndex = 0;
+            this.treeKategori.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeKategori_AfterSelect);
+            this.treeKategori.DoubleClick += new System.EventHandler(this.treeKategori_DoubleClick);
+            // 
             // grpIcerik
             // 
-            this.grpIcerik.Controls.Add(this.listView1);
+            this.grpIcerik.Controls.Add(this.lstViewIcerik);
             this.grpIcerik.Location = new System.Drawing.Point(218, 12);
             this.grpIcerik.Name = "grpIcerik";
             this.grpIcerik.Size = new System.Drawing.Size(566, 430);
@@ -56,20 +67,26 @@
             this.grpIcerik.TabStop = false;
             this.grpIcerik.Text = "İçerik";
             // 
-            // treeKategori
+            // lstViewIcerik
             // 
-            this.treeKategori.Location = new System.Drawing.Point(6, 19);
-            this.treeKategori.Name = "treeKategori";
-            this.treeKategori.Size = new System.Drawing.Size(188, 405);
-            this.treeKategori.TabIndex = 0;
+            this.lstViewIcerik.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2});
+            this.lstViewIcerik.Location = new System.Drawing.Point(6, 19);
+            this.lstViewIcerik.Name = "lstViewIcerik";
+            this.lstViewIcerik.Size = new System.Drawing.Size(554, 405);
+            this.lstViewIcerik.TabIndex = 0;
+            this.lstViewIcerik.UseCompatibleStateImageBehavior = false;
+            this.lstViewIcerik.View = System.Windows.Forms.View.Details;
             // 
-            // listView1
+            // columnHeader1
             // 
-            this.listView1.Location = new System.Drawing.Point(6, 19);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(554, 405);
-            this.listView1.TabIndex = 0;
-            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.columnHeader1.Text = "İsim";
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Eklenme Tarihi";
+            this.columnHeader2.Width = 85;
             // 
             // Form1
             // 
@@ -92,7 +109,9 @@
         private System.Windows.Forms.GroupBox grpKategori;
         private System.Windows.Forms.TreeView treeKategori;
         private System.Windows.Forms.GroupBox grpIcerik;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView lstViewIcerik;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
     }
 }
 
