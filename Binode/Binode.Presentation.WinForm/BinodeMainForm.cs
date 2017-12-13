@@ -15,11 +15,16 @@ namespace Binode.Presentation.WinForm
 {
     public partial class BinodeMainForm : Form
     {
-        public TreeNode _rightClicknode;
+        private TreeNode _rightClicknode;
 
         public BinodeMainForm()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -66,7 +71,7 @@ namespace Binode.Presentation.WinForm
             ListViewDoldur(e.Node);
         }
 
-        public void ListViewDoldur(TreeNode node)
+        private void ListViewDoldur(TreeNode node)
         {
             var kategori = node.Tag as Kategori;
 
@@ -85,6 +90,7 @@ namespace Binode.Presentation.WinForm
             {
                 var li = new ListViewItem(new[] { icerik.Isim, kategori.Isim });
                 li.Group = group;
+                li.ImageKey = icerik.Tip.ToString().ToLower();
                 listView1.Items.Add(li);
             }
 
@@ -122,6 +128,11 @@ namespace Binode.Presentation.WinForm
             var kategori = e.Node.Tag as Kategori;
 
             kategori.Isim = e.Label;
+            RefreshListView();
+        }
+
+        private void RefreshListView()
+        {
             listView1.Items.Clear();
             ListViewDoldur(treeKategori.SelectedNode);
         }
@@ -130,11 +141,10 @@ namespace Binode.Presentation.WinForm
         {
             string kategoriAdi = Interaction.InputBox("Kategori adını giriniz.");
             var anaKategori = _rightClicknode.Tag as Kategori;
-            var yeniKAtegori = new Kategori
-            {
+            var yeniKAtegori = new Kategori {
                 Isim = kategoriAdi,
                 UstKategori = anaKategori,
-                EklenmeTarihi = DateTime.Now,
+                EklenmeTarihi = DateTime.Now ,
                 //AltKategori = new List<Kategori>()
             };
 
@@ -150,31 +160,30 @@ namespace Binode.Presentation.WinForm
         private void metinToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var textContentForm = new AddTextContentForm();
-            textContentForm.Owner = this;
-            textContentForm.FormClosing += TextContentForm_FormClosing;
+            textContentForm.SelectedKategori = _rightClicknode.Tag as Kategori;
             textContentForm.ShowDialog();
+            RefreshListView();
         }
 
-        private void TextContentForm_FormClosing(object sender, FormClosingEventArgs e)
+        private void pdfToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var gelenForm = (AddTextContentForm)sender;
+            openFileDialog1.Filter = "PDF | *.pdf";
+            openFileDialog1.ShowDialog();
 
-            Kategori seciliKategori = _rightClicknode.Tag as Kategori;
+            var category = _rightClicknode.Tag as Kategori;
 
-            if (seciliKategori.Icerik == null)
-                seciliKategori.Icerik = new List<Icerik>();
-
-            seciliKategori.Icerik.Add(new Icerik
+            var content = new Icerik
             {
-                Isim = gelenForm.title,
-                Tip = IcerikTipi.Metin,
-                Kategori = seciliKategori,
-                Content = gelenForm.content,
-                EklenmeTarihi = DateTime.Now
-            });
+                Isim = openFileDialog1.SafeFileName,
+                Content = openFileDialog1.FileName,
+                Tip = IcerikTipi.Pdf,
+                EklenmeTarihi = DateTime.Now,
+                Kategori = category
+            };
 
-            listView1.Items.Clear();
-            ListViewDoldur(_rightClicknode);
+            category.Icerik.Add(content);
+
+            RefreshListView();
         }
     }
 }
