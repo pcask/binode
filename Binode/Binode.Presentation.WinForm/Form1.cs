@@ -22,11 +22,6 @@ namespace Binode.Presentation.WinForm
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void Form1_Load(object sender, EventArgs e)
         {
             var kategoriler = DemoData.DemoKategoriGetir();
@@ -135,10 +130,11 @@ namespace Binode.Presentation.WinForm
         {
             string kategoriAdi = Interaction.InputBox("Kategori adını giriniz.");
             var anaKategori = _rightClicknode.Tag as Kategori;
-            var yeniKAtegori = new Kategori {
+            var yeniKAtegori = new Kategori
+            {
                 Isim = kategoriAdi,
                 UstKategori = anaKategori,
-                EklenmeTarihi = DateTime.Now ,
+                EklenmeTarihi = DateTime.Now,
                 //AltKategori = new List<Kategori>()
             };
 
