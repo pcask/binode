@@ -97,6 +97,7 @@ namespace Binode.Presentation.WinForm
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.SmallIcon;
+            this.listView1.DoubleClick += new System.EventHandler(this.listView1_DoubleClick);
             // 
             // columnHeader1
             // 
@@ -112,8 +113,8 @@ namespace Binode.Presentation.WinForm
             this.imglContentSmallIcons.TransparentColor = System.Drawing.Color.Transparent;
             this.imglContentSmallIcons.Images.SetKeyName(0, "metin");
             this.imglContentSmallIcons.Images.SetKeyName(1, "pdf");
-            this.imglContentSmallIcons.Images.SetKeyName(2, "ses");
-            this.imglContentSmallIcons.Images.SetKeyName(3, "video");
+            this.imglContentSmallIcons.Images.SetKeyName(2, "video");
+            this.imglContentSmallIcons.Images.SetKeyName(3, "ses");
             // 
             // contextMenuStrip1
             // 
@@ -123,7 +124,7 @@ namespace Binode.Presentation.WinForm
             this.toolStripMenuItem4,
             this.toolStripMenuItem3});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(170, 92);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(170, 114);
             this.contextMenuStrip1.Text = "Yeniden Adlandır";
             // 
             // toolStripMenuItem1
